@@ -44,7 +44,7 @@ const Reviews = () => {
     setReviews(updatedReviews)
     setMyReview({ ...myReview, rating, comment })
   }
-  sdsd
+
   const handleOnReviewDelete = async () => {
     setLoading(true)
     const { data, error } = await deleteReview(myReview.reviewId)
