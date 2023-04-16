@@ -59,8 +59,6 @@ const Reviews = () => {
     toggleConfirmModal()
   }
 
-  reviews
-
   useEffect(() => {
     fetchMovieReviews()
   }, [movieId])
