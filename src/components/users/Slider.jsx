@@ -241,7 +241,7 @@ const Slider = () => {
     fetchLatestMovies()
   }, [])
 
-  // console.log(movies)
+  // (movies)
 
   return (
     <div className='grid xl:grid-cols-[4fr,1fr] gap-2 xl:h-[570px]'>

@@ -24,7 +24,7 @@ const CurrentSlide = forwardRef((props, ref) => {
 
 const Slide = ({ poster, movieId, title }) => {
   const slideTitleClasses =
-    'w-full text-accent dark:text-custom-yellow font-bold text-2xl absolute bottom-0 bg-gradient-to-r from-slate-100 dark:from-black p-4'
+    'capitalize w-full text-accent dark:text-custom-yellow font-bold text-2xl absolute bottom-0 bg-gradient-to-r from-slate-100 dark:from-black p-4'
   return (
     <Link to={`movie/${movieId}`} className='relative flex-shrink-0 w-full'>
       <img src={poster} alt={title} className='aspect-video w-full' />

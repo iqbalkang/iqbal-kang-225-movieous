@@ -42,7 +42,7 @@ const Login = () => {
   useEffect(() => {
     // if (user) navigate('/', { replace: true })
     if (user) navigate('/')
-    // if (user) console.log(location.state)
+    // if (user) (location.state)
     if (error) renderNotification('error', error)
   }, [user, error])
 

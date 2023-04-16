@@ -12,7 +12,6 @@ const getAppInfo = async () => {
     })
     return { data }
   } catch (error) {
-    console.log(error)
     const { response } = error
     if (response?.data) return { error: response.data }
     return { error }
@@ -30,7 +29,6 @@ const getMostRated = async () => {
     })
     return { data }
   } catch (error) {
-    console.log(error)
     const { response } = error
     if (response?.data) return { error: response.data }
     return { error }

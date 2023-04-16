@@ -21,7 +21,7 @@ const SingleMovie = () => {
   const [ratingModal, setRatingModal] = useState(false)
   const [ownerReview, setOwnerReview] = useState(null)
 
-  // console.log(ownerReview)
+  // (ownerReview)
 
   const { user } = authInfo
 

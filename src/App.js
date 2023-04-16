@@ -19,7 +19,6 @@ function App() {
   const { user } = authInfo
   const navigate = useNavigate()
 
-  // console.log(user)
   if (user?.isAdmin) {
     return <AdminRouter />
   }

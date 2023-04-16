@@ -15,8 +15,7 @@ const UserMovieSearch = () => {
   const [searchedMovies, setSearchedMovies] = useState([])
 
   const fetchSearchedMovies = async () => {
-    const { data, error } = await searchMovieUser(title)
-    console.log(data)
+    const { data, error } = await searchMovieUser(title)(data)
     if (!data.movies.length) return renderNotification('warning', 'No record was found')
     setSearchedMovies(data.movies)
   }

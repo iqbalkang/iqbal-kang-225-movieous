@@ -19,14 +19,14 @@ const Movies = () => {
   const handleOnMovieEdit = async id => {
     toggleUpdateMovieModal()
     const { data, error } = await getMovie(id)
-    if (error) return console.log(error)
+    if (error) return error
     setSelectedMovie(data.movie)
   }
 
   const handleOnMovieDelete = async id => {
     setLoading(true)
     const { data, error } = await deleteMovie(selectedMovieId)
-    if (error) return console.log(error)
+    if (error) return error
     setLoading(false)
     setConfirmModal(false)
     if (data.status === 'success') await fetchMovies()

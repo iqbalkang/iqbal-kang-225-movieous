@@ -25,7 +25,7 @@ const RecentUploads = () => {
   const handleOnMovieDelete = async id => {
     setLoading(true)
     const { data, error } = await deleteMovie(selectedMovieId)
-    if (error) return console.log(error)
+    if (error) return error
     setLoading(false)
     if (data.status === 'success') await fetchLatestMovies(4)
     setConfirmModal(false)

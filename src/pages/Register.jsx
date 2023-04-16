@@ -15,7 +15,7 @@ const Register = () => {
   const { renderNotification } = useNotification()
   const { register, authInfo } = useAuth()
 
-  // console.log(user)
+  // (user)
 
   const { user, isLoading, error } = authInfo
 
@@ -40,7 +40,7 @@ const Register = () => {
 
     const { status, user, message } = await register(userInfo)
 
-    // if (error) return renderNotification('error', error.message)
+    // if (error) return renderNotification('error', error)
 
     if (status === 'success') {
       renderNotification('success', message)
@@ -50,6 +50,10 @@ const Register = () => {
       })
     }
   }
+
+  useEffect(() => {
+    if (error) renderNotification('error', error)
+  }, [error])
 
   useEffect(() => {
     if (user) navigate('/')

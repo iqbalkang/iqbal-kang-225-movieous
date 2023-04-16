@@ -59,7 +59,7 @@ const Reviews = () => {
     toggleConfirmModal()
   }
 
-  console.log(reviews)
+  reviews
 
   useEffect(() => {
     fetchMovieReviews()

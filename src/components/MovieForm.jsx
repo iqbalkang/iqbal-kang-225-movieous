@@ -187,7 +187,7 @@ const MovieForm = ({ trailer, videoSelected, selectedMovie, toggleVideoStates })
     forceCloseModals()
   }
 
-  // console.log(movieInfo.cast)
+  // (movieInfo.cast)
 
   return (
     <form

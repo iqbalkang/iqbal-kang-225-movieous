@@ -17,7 +17,7 @@ const CreateMovieModal = ({ visible, closeModal, toggleFillingForm }) => {
     const trailer = new FormData()
     trailer.append('trailer', file)
 
-    const { data } = await postTrailer(trailer, setUploadProgress)
+    const { data, error } = await postTrailer(trailer, setUploadProgress)(data)(error)
     setTrailerInfo(data)
     setVideoUploaded(true)
   }

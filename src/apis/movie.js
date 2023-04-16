@@ -20,7 +20,6 @@ const postMovie = async movieInfo => {
     const { data } = await customFetch.post(`/movie`, movieInfo)
     return { data }
   } catch (error) {
-    console.log(error)
     const { response } = error
     if (response?.data) return { error: response.data }
     return { error }
@@ -28,12 +27,10 @@ const postMovie = async movieInfo => {
 }
 
 const updateMovie = async (id, movieInfo) => {
-  console.log(id)
   try {
     const { data } = await customFetch.patch(`/movie/${id}`, movieInfo)
     return { data }
   } catch (error) {
-    console.log(error)
     const { response } = error
     if (response?.data) return { error: response.data.message }
     return { error }
@@ -45,7 +42,6 @@ const getMovies = async (page, limit) => {
     const { data } = await customFetch.get(`/movie?page=${page}&limit=${limit}`)
     return { data }
   } catch (error) {
-    console.log(error)
     const { response } = error
     if (response?.data) return { error: response.data }
     return { error }
@@ -57,7 +53,6 @@ const getMovie = async id => {
     const { data } = await customFetch.get(`/movie/${id}`)
     return { data }
   } catch (error) {
-    console.log(error)
     const { response } = error
     if (response?.data) return { error: response.data }
     return { error }
@@ -69,7 +64,6 @@ const searchMovie = async title => {
     const { data } = await customFetch.get(`/movie/search?title=${title}`)
     return { data }
   } catch (error) {
-    console.log(error)
     const { response } = error
     if (response?.data) return { error: response.data }
     return { error }
@@ -78,11 +72,9 @@ const searchMovie = async title => {
 
 const deleteMovie = async id => {
   try {
-    const { data } = await customFetch.delete(`/movie/${id}`)
-    console.log(data)
+    const { data } = await customFetch.delete(`/movie/${id}`)(data)
     return { data }
   } catch (error) {
-    console.log(error)
     const { response } = error
     if (response?.data) return { error: response.data }
     return { error }
@@ -94,10 +86,9 @@ const getTopRated = async type => {
   if (type) url = `${url}?type=${type}`
   try {
     const { data } = await customFetch.get(url)
-    // console.log(data)
+    // (data)
     return { data }
   } catch (error) {
-    console.log(error)
     const { response } = error
     if (response?.data) return { error: response.data }
     return { error }
@@ -112,7 +103,6 @@ const getLatestMovies = async limit => {
     const { data } = await customFetch.get(url)
     return { data }
   } catch (error) {
-    console.log(error)
     const { response } = error
     if (response?.data) return { error: response.data }
     return { error }
@@ -124,7 +114,6 @@ const getSingleMovie = async id => {
     const { data } = await customFetch.get(`movie/single-movie/${id}`)
     return { data }
   } catch (error) {
-    console.log(error)
     const { response } = error
     if (response?.data) return { error: response.data }
     return { error }
@@ -136,7 +125,6 @@ const getRelatedMovies = async id => {
     const { data } = await customFetch.get(`movie/related-movies/${id}`)
     return { data }
   } catch (error) {
-    console.log(error)
     const { response } = error
     if (response?.data) return { error: response.data }
     return { error }
@@ -148,7 +136,6 @@ const searchMovieUser = async title => {
     const { data } = await customFetch.get(`/movie/movie-search?title=${title}`)
     return { data }
   } catch (error) {
-    console.log(error)
     const { response } = error
     if (response?.data) return { error: response.data }
     return { error }
@@ -160,7 +147,6 @@ const getAllMovies = async (page, limit) => {
     const { data } = await customFetch.get(`/movie/all-movies?page=${page}&limit=${limit}`)
     return { data }
   } catch (error) {
-    console.log(error)
     const { response } = error
     if (response?.data) return { error: response.data }
     return { error }

@@ -16,7 +16,6 @@ const postLogin = async userInfo => {
     const { data } = await customFetch.post(`/auth/login`, userInfo)
     return { data }
   } catch (error) {
-    console.log(error)
     const { response } = error
     if (response?.data) return { error: response.data }
     return { error }

@@ -12,7 +12,6 @@ const postReview = async (id, review) => {
     })
     return { data }
   } catch (error) {
-    console.log(error)
     const { response } = error
     if (response?.data) return { error: response.data }
     return { error }
@@ -24,7 +23,6 @@ const getReviews = async (id, review) => {
     const { data } = await customFetch.get(`review/${id}`)
     return { data }
   } catch (error) {
-    console.log(error)
     const { response } = error
     if (response?.data) return { error: response.data }
     return { error }
@@ -42,7 +40,6 @@ const updateReview = async (id, review) => {
     })
     return { data }
   } catch (error) {
-    console.log(error)
     const { response } = error
     if (response?.data) return { error: response.data }
     return { error }
@@ -60,7 +57,6 @@ const deleteReview = async (id, review) => {
     })
     return { data }
   } catch (error) {
-    console.log(error)
     const { response } = error
     if (response?.data) return { error: response.data }
     return { error }
@@ -78,7 +74,6 @@ const getOwnerReview = async id => {
     })
     return { data }
   } catch (error) {
-    console.log(error)
     const { response } = error
     if (response?.data) return { error: response.data }
     return { error }

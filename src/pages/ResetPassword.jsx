@@ -55,8 +55,7 @@ const ResetPassword = () => {
       const { data, error } = await postVerifyResetPasswordToken({ token, userId })
 
       if (error) {
-        setIsDisable(true)
-        console.log(isDisable)
+        setIsDisable(true)(isDisable)
         renderNotification('error', error.message)
         setTimeout(() => {
           navigate('/')
